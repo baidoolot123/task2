@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% include 'header.html' %}
 <body>
-    {% include 'header.html' %}
+    
     <div class='container'> 
         <!-- {% for book in books %}   -->
         <div class='col-md-4'>
@@ -15,3 +16,4 @@
     </div>
 
 </body>
+{% endblock %}

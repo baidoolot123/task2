@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+<body>
+
+    <div class="container">
+    
+            {% for book in books %}
+                    <div class='col-md-4'>
+                    <img class="image-img" src="{{book.image.url}}">
+                    <h2>{{book.title}}</h2>
+                    <h5>{{book.author}}</h5>
+                </div>
+    
+            {% endfor %}
+        </div>
+</body>        
+{% endblock %}

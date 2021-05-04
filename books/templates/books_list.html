@@ -10,7 +10,10 @@
             <img class="avatar-img" src="{{book.image.url}}">
             <h2> <a href='#'></a>{{book.title}}</h2>
             <h5> {{book.author}}</h5>
-            <h5> {{book.genre}}</h5>   
+            <h5> {{book.genre}}</h5> 
+            <a href="{% url 'books:book_edit' book.pk %}">Редактировать книгу</a>
+            <a href="{% url 'books:book_delete' book.pk %}">Удалить книгу</a>
+
         </div>  
         {% endfor %}    
     </div>
